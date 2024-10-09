@@ -1,0 +1,32 @@
+<div class="footer-contact-block">
+  {% if company_logo %}
+    <div class="footer-logo">
+      <img src="{{ company_logo }}" alt="Company Logo">
+    </div>
+  {% endif %}
+
+  <div class="footer-contact-info">
+    {% if location_icon %}
+      <div class="footer-location">
+      <div class="location-img">
+        <img src="{{ location_icon }}" alt="Location Icon">
+      </div>
+        <p>{{ address }}</p>
+      </div>
+    {% endif %}
+
+    {% if email_icon %}
+      <div class="footer-email">
+        <img src="{{ email_icon }}" alt="Email Icon">
+        <p>{{ email_address }}</p>
+      </div>
+    {% endif %}
+
+    {% if phone_icon %}
+      <div class="footer-phone">
+        <img src="{{ phone_icon }}" alt="Phone Icon">
+        <p>{{ phone_number }}</p>
+      </div>
+    {% endif %}
+  </div>
+</div>

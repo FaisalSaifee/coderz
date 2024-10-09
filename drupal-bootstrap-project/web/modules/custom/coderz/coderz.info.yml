@@ -1,0 +1,9 @@
+name: Coderz
+type: module
+description: 'A custom module for created for coderz.'
+core_version_requirement: ^10
+package: Custom
+dependencies:
+  - drupal:block
+  - drupal:image
+  - drupal:views

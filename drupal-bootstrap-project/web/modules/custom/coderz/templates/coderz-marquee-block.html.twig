@@ -1,0 +1,13 @@
+<div class="marquee-block">
+  <div class="marquee-left">
+    <p>{{ description }}</p>
+  </div>
+
+  <div class="marquee-right">
+    <div class="marquee-images">
+      {% for image in images %}
+        <img src="{{ image }}" alt="Marquee Image">
+      {% endfor %}
+    </div>
+  </div>
+</div>

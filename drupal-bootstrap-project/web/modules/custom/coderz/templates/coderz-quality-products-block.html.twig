@@ -1,0 +1,20 @@
+<div class="quality-products-block">
+  <h2>{{ heading }}</h2>
+  <h4>{{ subheading }}</h4>
+
+  <div class="product-cards">
+    {% for item in items %}
+      <div class="product-card">
+        {% if item.image %}
+        <div class="product-img">
+          <img src="{{ item.image }}" alt="Image for {{ item.title }}">
+        </div>
+        {% endif %}
+        <div class="product-details">
+            <h3>{{ item.title }}</h3>
+            <p>{{ item.description }}</p>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</div>

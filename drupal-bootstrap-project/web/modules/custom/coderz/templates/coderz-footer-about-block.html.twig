@@ -1,0 +1,15 @@
+<div class="footer-about-block">
+  <div class="footer-description">
+    <p>{{ description }}</p>
+  </div>
+
+  <div class="footer-social-icons">
+    {% for icon in icons %}
+      {% if icon.icon_url %}
+        <a href="{{ icon.link }}" target="_blank">
+          <img src="{{ icon.icon_url }}" alt="Social Icon">
+        </a>
+      {% endif %}
+    {% endfor %}
+  </div>
+</div>

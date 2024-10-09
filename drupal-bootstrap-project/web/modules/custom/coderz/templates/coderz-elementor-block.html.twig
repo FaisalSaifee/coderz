@@ -1,0 +1,11 @@
+<div class="elementor-block">
+  {% for item in items %}
+    <div class="elementor-item">
+      {% if item.image %}
+        <img src="{{ item.image }}" alt="Image for {{ item.title }}">
+      {% endif %}
+      <h3>{{ item.title }}</h3>
+      <p>{{ item.description }}</p>
+    </div>
+  {% endfor %}
+</div>

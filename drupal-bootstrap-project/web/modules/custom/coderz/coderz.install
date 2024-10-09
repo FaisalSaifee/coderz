@@ -1,0 +1,53 @@
+<?php
+
+/**
+ * Implements hook_schema().
+ */
+function coderz_schema() {
+  return [
+    'request_form_submissions' => [
+      'description' => 'Stores request form submissions.',
+      'fields' => [
+        'id' => [
+          'type' => 'serial',
+          'not null' => TRUE,
+        ],
+        'full_name' => [
+          'type' => 'varchar',
+          'length' => 255,
+          'not null' => TRUE,
+        ],
+        'phone_number' => [
+          'type' => 'varchar',
+          'length' => 20,
+          'not null' => TRUE,
+        ],
+        'email_address' => [
+          'type' => 'varchar',
+          'length' => 255,
+          'not null' => TRUE,
+        ],
+        'address_location' => [
+          'type' => 'varchar',
+          'length' => 255,
+          'not null' => TRUE,
+        ],
+        'select_time' => [
+          'type' => 'varchar',
+          'length' => 10,
+          'not null' => TRUE,
+        ],
+        'date' => [
+          'type' => 'varchar',
+          'length' => 10,
+          'not null' => TRUE,
+        ],
+        'submitted' => [
+          'type' => 'int',
+          'not null' => TRUE,
+        ],
+      ],
+      'primary key' => ['id'],
+    ],
+  ];
+}

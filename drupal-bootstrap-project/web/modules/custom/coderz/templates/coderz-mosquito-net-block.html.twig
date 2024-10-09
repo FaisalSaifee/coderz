@@ -1,0 +1,24 @@
+<div class="mosquito-net-block">
+  <h2>{{ title }}</h2>
+
+  <div class="mosquito-net-layout">
+    <div class="mosquito-net-left">
+      <div class="mosquito-cards">
+        {% for card in cards %}
+          <div class="mosquito-card">
+            {% if card.image %}
+              <img src="{{ card.image }}" alt="Image for {{ card.title }}">
+            {% endif %}
+            <h4>{{ card.title }}</h4>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+
+    <div class="mosquito-net-right">
+      {% if big_image %}
+        <img src="{{ big_image }}" alt="Big Mosquito Net Image">
+      {% endif %}
+    </div>
+  </div>
+</div>

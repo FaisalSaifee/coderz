@@ -1,0 +1,20 @@
+<div class="about-company-block">
+  <div class="about-company-left">
+    {% if normal_image %}
+      <img src="{{ normal_image }}" alt="Normal Image">
+    {% endif %}
+    {% if video_image %}
+      <img src="{{ video_image }}" alt="Video Image">
+    {% endif %}
+  </div>
+
+  <div class="about-company-right">
+    <h2>{{ title }}</h2>
+    <h4>{{ our_factory }}</h4>
+    <p>{{ description }}</p>
+
+    {% if button_text and button_link %}
+      <a href="{{ button_link }}" class="btn-about">{{ button_text }}</a>
+    {% endif %}
+  </div>
+</div>

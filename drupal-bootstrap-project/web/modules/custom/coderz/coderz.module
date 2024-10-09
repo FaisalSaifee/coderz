@@ -1,0 +1,98 @@
+<?php
+
+/**
+ * Implements hook_theme().
+ */
+function coderz_theme() {
+  return [
+    'coderz_banner_block' => [
+      'variables' => [
+        'image_url' => NULL,
+        'banner_heading' => NULL,
+        'banner_subheading' => NULL,
+        'banner_description' => NULL,
+        'button1_text' => NULL,
+        'button1_link' => NULL,
+        'button2_text' => NULL,
+        'button2_link' => NULL,
+      ],
+    ],
+    'coderz_request_block' => [
+      'variables' => [
+        'install_heading' => NULL,
+        'best_screens' => NULL,
+        'product_description' => NULL,
+        'phone_number' => NULL,
+        'icon_image' => NULL,
+        'form' => NULL,
+      ],
+    ],
+    'coderz_elementor_block' => [
+      'variables' => [
+        'items' => [],
+      ],
+    ],
+    'coderz_quality_products_block' => [
+      'variables' => [
+        'heading' => '',
+        'subheading' => '',
+        'items' => [],
+      ],
+    ],
+    'coderz_mosquito_net_block' => [
+      'variables' => [
+        'title' => '',
+        'big_image' => '',
+        'cards' => [],
+      ],
+    ],
+    'coderz_marquee_block' => [
+      'variables' => [
+        'description' => '',
+        'images' => [],
+      ],
+    ],
+    'coderz_about_company_block' => [
+      'variables' => [
+        'title' => '',
+        'our_factory' => '',
+        'description' => '',
+        'button_text' => '',
+        'button_link' => '',
+        'normal_image' => '',
+        'video_image' => '',
+      ],
+    ],
+    'coderz_footer_one_block' => [
+      'variables' => [
+        'cards' => [],
+      ],
+    ],
+    'coderz_footer_contact_block' => [
+      'variables' => [
+        'company_logo' => '',
+        'location_icon' => '',
+        'address' => '',
+        'email_icon' => '',
+        'email_address' => '',
+        'phone_icon' => '',
+        'phone_number' => '',
+      ],
+    ],
+    'coderz_footer_about_block' => [
+      'variables' => [
+        'description' => '',
+        'icons' => [],
+      ],
+    ],
+  ];
+}
+
+
+/**
+ * Implements hook_page_attachments().
+ */
+function coderz_page_attachments(array &$page) {
+    // Attach the library globally on all pages.
+    $page['#attached']['library'][] = 'coderz/coderz_styles';
+  }

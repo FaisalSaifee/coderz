@@ -1,0 +1,135 @@
+// Sub theme styling.
+@import 'variables_drupal';
+
+// Bootstrap overridden variables.
+// @see https://getbootstrap.com/docs/5.2/customize/sass/#variable-defaults.
+@import 'variables_bootstrap';
+
+// Include bootstrap.
+@import '../../../../themes/contrib/bootstrap5/scss/style';
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');
+
+
+body {
+    background-color: #FFFFFF;
+    font-family: 'Outfit', sans-serif;
+
+    .region-nav-branding {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        > .block-system-branding-block,
+        > .navigation.menu--main,
+        > #block-faisalsaifee-getstarted {
+            flex: 1;
+            padding: 10px;
+        }
+
+        .block-system-branding-block {
+            flex: 0 0 auto;
+        }
+
+        .navigation.menu--main {
+            flex: 2;
+            .navbar-nav {
+                justify-content: center !important;
+                .nav-item {
+                    font-weight: 400;
+                    padding-left: 20px;
+                    padding-right: 20px;
+                    position: relative;
+                    &:hover::after {
+                        content: '';
+                        position: absolute;
+                        left: 50%;
+                        bottom: 0;
+                        width: 80%;
+                        height: 2px;
+                        background-color: #000;
+                        transform: translateX(-50%);
+                      }
+                      .dropdown-toggle::after {
+                            content: "\f078";
+                            font-family: "Font Awesome 6 Free";
+                            font-weight: 900;
+                            display: inline-block;
+                            margin-left: 0.255em;
+                            vertical-align: 0.255em;
+                            font-size: 0.875em;
+                            border: 0px;
+                          }
+                }
+            }
+        }
+
+        #block-faisalsaifee-getstarted {
+            flex: 0 0 auto;
+            .field--name-body {
+                border: solid #000000 1px;
+                padding: 10px 25px;
+                border-radius: 5px;
+                p {
+                    margin: 0px;
+                    a {
+                        font-weight: 700;
+                        text-decoration: none;
+                        color: #000000;
+                    }
+                }
+            }
+
+
+        }
+
+        .block-system-branding-block {
+            width: 70px;
+            .navbar-brand {
+                width: 48px;
+                img {
+                    width: 48px;
+                    height: 42px;
+                }
+            }
+        }
+    }
+}
+
+
+@media (max-width: 768px) {
+    .region-nav-branding {
+      flex-direction: column;
+      align-items: flex-start;
+
+      > .site-branding,
+      > .main-navigation,
+      > .get-started {
+        width: 100%;
+        padding: 10px 0;
+      }
+    }
+  }
+
+  .footer-first {
+    padding: 20px 0;
+    background-color: #113E65;
+  }
+
+  footer.mt-auto {
+    background-color: #0F0F0F;
+  }
+
+  .footer-last {
+    padding: 20px;
+    background-color:#0F0F0F;
+    text-align: center;
+    color:#FFFFFF;
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: 400;
+  }
+
+
