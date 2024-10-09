@@ -6,19 +6,30 @@ use Drupal\Core\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
 
 /**
- *
+ * Provides a custom contact form for the Coderz module.
  */
 class ContactForm extends FormBase {
 
   /**
+   * Returns the unique ID for the form.
    *
+   * @return string
+   *   The unique form ID.
    */
   public function getFormId() {
     return 'coderz_contact_form';
   }
 
   /**
+   * Builds the contact form.
    *
+   * @param array $form
+   *   An associative array containing the structure of the form.
+   * @param \Drupal\Core\Form\FormStateInterface $form_state
+   *   The current state of the form.
+   *
+   * @return array
+   *   The form structure.
    */
   public function buildForm(array $form, FormStateInterface $form_state) {
     $form['full_name'] = [
@@ -78,7 +89,12 @@ class ContactForm extends FormBase {
   }
 
   /**
+   * Form validation handler.
    *
+   * @param array &$form
+   *   The form structure.
+   * @param \Drupal\Core\Form\FormStateInterface $form_state
+   *   The current state of the form.
    */
   public function validateForm(array &$form, FormStateInterface $form_state) {
     // Validate phone number (must contain exactly 10 digits).
@@ -110,7 +126,12 @@ class ContactForm extends FormBase {
   }
 
   /**
+   * Form submission handler.
    *
+   * @param array &$form
+   *   The form structure.
+   * @param \Drupal\Core\Form\FormStateInterface $form_state
+   *   The current state of the form.
    */
   public function submitForm(array &$form, FormStateInterface $form_state) {
     // Get the form values.
